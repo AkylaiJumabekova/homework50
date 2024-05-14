@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://unpkg.com/react@18/umd/react.development.js"></script>
+    <script src="https://unpkg.com/react-dom@18/umd/react-dom.development.js"></script>
+    <script src="https://unpkg.com/@babel/standalone/babel.min.js"></script>
+
+    <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+
+    <div id="App" style="display: flex; justify-content:space-between; margin: 40px;"></div>
+
+    <script type="text/babel">
+    
+        const Movies = ({ title, year, poster }) => {
+          return (
+            <div className="movies" style={{ backgroundImage: `url(${poster})` }}>
+                <aside>
+                    <div class="card-info">
+                        <h1>{title}</h1>
+                        <p>Year: {year}</p>
+            
+                        <button class="poster-button">
+                            <a href="#" class="button-link">Learn more</a>
+                        </button>
+                    </div>
+                </aside>
+              </div>
+    
+          );
+        };
+    
+        const movie = (
+          <>
+            <Movies
+              title="Black Panther"
+              year="2018"
+              poster="https://fs.kinomania.ru/file/film_poster/5/39/539f033678bbc98f05536b034a5f3b06.jpeg"
+            />,
+            <Movies
+              title="1+1"
+              year="2011"
+              poster="https://upload.wikimedia.org/wikipedia/ru/b/b9/Intouchables.jpg"
+            />,
+            <Movies
+              title="Ready or Not"
+              year="2019"
+              poster="https://www.kino-teatr.ru/movie/poster/134748/95582.jpg"
+            />
+          </>
+        );
+    
+        const container = document.getElementById('App');
+
+        ReactDOM.createRoot(container).render(movie);
+        
+    </script>
+    
+</body>
+</html>

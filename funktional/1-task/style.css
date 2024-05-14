@@ -1,0 +1,40 @@
+body{
+    background-color: #f1efef;
+}
+
+.movies {
+  width: 350px;
+  height: 500px;
+  display: flex;
+  align-items: flex-end;
+  border-radius: 5px;
+  background-size: cover;
+  overflow: hidden;
+  margin-left: 40px;
+}
+
+.movies > aside {
+  width: 100%;
+  height: 90px;
+  background-color: white;
+  transition: all ease 1s;
+}
+
+.card-info{
+    padding: 0 10px 0 20px;
+}
+
+.poster-button{
+  padding: 10px 87px;
+  border: 1px solid white;
+  margin-left: 10px;
+}
+.button-link{
+  color: black;
+  padding: 10px 20px;
+  text-decoration: none;
+}
+
+.movies aside:hover {
+  height: 160px;
+}
